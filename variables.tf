@@ -27,3 +27,15 @@ variable "vsphere_datacenter" {
   type        = string
   default     = "Datacenter"
 }
+
+variable "Datastore_Cluster" {
+  description = "The name of the vSphere datastore cluster to use"
+  type        = string
+  default     = "DatastoreCluster"
+}
+
+variable "vsphere_network" {
+  description = "The name of the vSphere network to use"
+  type        = string
+  default     = "VM Network"
+}
