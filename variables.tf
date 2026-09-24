@@ -39,3 +39,9 @@ variable "vsphere_network" {
   type        = string
   default     = "VM Network"
 }
+
+variable "vm_template_name" {
+  description = "The name of the vSphere VM template to use"
+  type        = string
+  default     = "ubuntu-noble-24.04-cloudimg"
+}
