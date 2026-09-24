@@ -5,7 +5,7 @@ resource "vsphere_virtual_machine" "k8scontrolplane-prod01" {
     network_id = data.vsphere_network.network.id
   }
   clone {
-    template_uuid = data.vsphere_virtual_machine_template.template.id
+    template_uuid = data.vsphere_virtual_machine.template.id
   }
   name = "k8scontrolplane-prod01"
 }
@@ -17,7 +17,7 @@ resource "vsphere_virtual_machine" "k8sworker-prod01" {
     network_id = data.vsphere_network.network.id
   }
   clone {
-    template_uuid = data.vsphere_virtual_machine_template.template.id
+    template_uuid = data.vsphere_virtual_machine.template.id
   }
   name = "k8sworker-prod01"
 }
@@ -29,7 +29,7 @@ resource "vsphere_virtual_machine" "k8sworker-prod02" {
     network_id = data.vsphere_network.network.id
   }
   clone {
-    template_uuid = data.vsphere_virtual_machine_template.template.id
+    template_uuid = data.vsphere_virtual_machine.template.id
   }
   name = "k8sworker-prod02"
 }
