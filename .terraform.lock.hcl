@@ -1,6 +1,26 @@
 # This file is maintained automatically by "terraform init".
 # Manual edits may be lost in future updates.
 
+provider "registry.terraform.io/lord-kyron/phpipam" {
+  version     = "1.7.0"
+  constraints = "1.7.0"
+  hashes = [
+    "h1:PSIaR/9H1v+z1ULqmAMxM5LOl15uVztObDLUqYxjhZU=",
+    "zh:1ac272e8e3a82aa49ce525d0c86a9c13d5e8ad0bebfc18f21cc986eb6a8b5304",
+    "zh:2e59490dc829ccb56905237bb42979128b61e70eb0f8db4da4b07ac8b42f18e0",
+    "zh:3a5639daf813f0d461bade1a799a1b50dede0b21d00db6426c39627e38a7f5f4",
+    "zh:58364f43717dac3b1c2ab1a048fb804e2d8129150ada51aed058709d4491e428",
+    "zh:675265c27d413e966c8a2ea139ce0e357d9a3a77204f9b9dd8858d4182faf1ea",
+    "zh:6a3220456c1c92e0796a453892bf84fb5dd39625ed1c9dd411e91ff72b7d5a91",
+    "zh:72a1dff9fc5e919d19dade05073ea08c42af87c3ea64c7b872500096b5820aec",
+    "zh:79d21947b91e868e6645d5358362e9f669f29ffa87d0ccae2e8751d6c24babff",
+    "zh:ae7f94b432317369e138be460e10a180ba6e34cf1b796eb1b2e0079b86277a79",
+    "zh:b30a2606eeace762d25d14a36a035970fd953332bc6dcb03dc3ebc4054f396a7",
+    "zh:d1d3ab644ea60da2234aaf11fa0a05fafa2b8bd9f8fe18481c6c295a96f37c35",
+    "zh:e4645d936c933897743d1072b7a9ad839564899d40a2a59a66384409a93cac69",
+  ]
+}
+
 provider "registry.terraform.io/vmware/vsphere" {
   version     = "2.17.1"
   constraints = "2.17.1"

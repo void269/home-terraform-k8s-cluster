@@ -48,3 +48,4 @@ plan.out
 *.pem
 join.sh
 NUL
+secrets.auto.tfvars

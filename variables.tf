@@ -1,3 +1,15 @@
+variable "control_plane_count" {
+  description = "Number of Kubernetes control plane nodes"
+  type        = number
+  default     = 1
+}
+
+variable "worker_count" {
+  description = "Number of Kubernetes worker nodes"
+  type        = number
+  default     = 2
+}
+
 variable "vsphere_user" {
   description = "The vSphere user to connect to the vSphere server"
   type        = string
@@ -46,12 +58,6 @@ variable "vm_template_name" {
   default     = "ubuntu-26-04-template"
 }
 
-variable "controlplane_ip" {
-  description = "The IP address of the control plane node"
-  type        = list(string)
-  default     = ["10.0.1.17"]
-}
-
 variable "domain_name" {
   description = "The domain name to use for the cluster"
   type        = string
@@ -61,7 +67,7 @@ variable "domain_name" {
 variable "dns_suffixes" {
   description = "The DNS suffixes to use for the cluster"
   type        = list(string)
-  default     = [var.domain_name]
+  default     = ["voidnet.com"]
 }
 
 variable "dns_servers" {
@@ -82,14 +88,32 @@ variable "gateway_ip" {
   default     = "10.0.1.1"
 }
 
-variable "k8sworker_ip" {
-  description = "The IP addresses of the worker nodes"
-  type        = list(string)
-  default     = ["10.0.1.18", "10.0.1.19"]
+variable "phpipam_url" {
+  description = "Base URL of the IPAM server"
+  type        = string
+  default     = "https://ipam-prod01.voidnet.com"
 }
 
-variable "k8scontrolplane_ip" {
-  description = "The IP addresses of the control plane nodes"
-  type        = list(string)
-  default     = ["10.0.1.17"]
+variable "phpipam_app_id" {
+  description = "IPAM API application ID"
+  type        = string
+  default     = "terraform"
+}
+
+# variable "ipam_subnet_id" {
+#   description = "IPAM subnet ID used for Kubernetes VM address allocation"
+#   type        = number
+#   default     = 7
+# }
+
+variable "phpipam_username" {
+  description = "IPAM API username"
+  type        = string
+  default     = "admin"
+}
+
+variable "phpipam_password" {
+  description = "IPAM API password"
+  type        = string
+  sensitive   = true
 }

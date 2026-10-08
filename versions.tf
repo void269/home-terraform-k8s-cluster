@@ -4,5 +4,9 @@ terraform {
       source  = "vmware/vsphere"
       version = "2.17.1"
     }
+    phpipam = {
+      source  = "lord-kyron/phpipam"
+      version = "1.7.0"
+    }
   }
 }
