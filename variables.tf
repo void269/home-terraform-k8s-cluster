@@ -100,11 +100,11 @@ variable "phpipam_app_id" {
   default     = "terraform"
 }
 
-# variable "ipam_subnet_id" {
-#   description = "IPAM subnet ID used for Kubernetes VM address allocation"
-#   type        = number
-#   default     = 7
-# }
+variable "ipam_subnet_id" {
+  description = "IPAM subnet ID used for Kubernetes VM address allocation"
+  type        = number
+  default     = 7
+}
 
 variable "phpipam_username" {
   description = "IPAM API username"
