@@ -55,7 +55,7 @@ variable "vsphere_network" {
 variable "vm_template_name" {
   description = "The name of the vSphere VM template to use"
   type        = string
-  default     = "ubuntu-26-04-template"
+  default     = "ubuntu-26.04-template"
 }
 
 variable "domain_name" {
